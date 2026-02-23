@@ -1,0 +1,14 @@
+# Build artifacts
+*.o
+*.dSYM/
+
+# Stata logs
+*.log
+*.smcl
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test reference data (generated)
+tests/ref_*.csv
