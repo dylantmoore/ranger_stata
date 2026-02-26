@@ -335,24 +335,22 @@ program define ranger, rclass
     display as text ""
 
     /* ---- Load plugin (platform cascade) ---- */
-    capture program ranger_plugin, plugin ///
-        using("ranger_plugin.darwin-arm64.plugin")
-    if _rc & _rc != 110 {
-        capture program ranger_plugin, plugin ///
-            using("ranger_plugin.darwin-x86_64.plugin")
-        if _rc & _rc != 110 {
-            capture program ranger_plugin, plugin ///
-                using("ranger_plugin.linux-x86_64.plugin")
-            if _rc & _rc != 110 {
-                capture program ranger_plugin, plugin ///
-                    using("ranger_plugin.windows-x86_64.plugin")
-                if _rc & _rc != 110 {
-                    display as error "could not load ranger_plugin"
-                    display as error "make sure the .plugin file is installed"
-                    exit 601
+    local plugin_loaded 0
+    foreach plat in darwin-arm64 darwin-x86_64 linux-x86_64 windows-x86_64 {
+        if !`plugin_loaded' {
+            capture findfile ranger_plugin.`plat'.plugin
+            if _rc == 0 {
+                capture program ranger_plugin, plugin using("`r(fn)'")
+                if _rc == 0 | _rc == 110 {
+                    local plugin_loaded 1
                 }
             }
         }
+    }
+    if !`plugin_loaded' {
+        display as error "could not load ranger_plugin"
+        display as error "make sure the .plugin file is installed"
+        exit 601
     }
 
     /* ---- Build variable list for plugin call ---- */
