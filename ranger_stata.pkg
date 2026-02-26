@@ -12,6 +12,3 @@ d Distribution-Date: 20260226
 f ranger.ado
 f ranger.sthlp
 f ranger_plugin.darwin-arm64.plugin
-f ranger_plugin.darwin-x86_64.plugin
-f ranger_plugin.linux-x86_64.plugin
-f ranger_plugin.windows-x86_64.plugin
