@@ -6,8 +6,20 @@ Supports **regression**, **classification**, **probability**, and **survival** f
 
 ## Installation
 
+Platform-specific packages (recommended — installs only the binary for your OS):
+
 ```stata
-net install ranger_stata, from("https://raw.githubusercontent.com/dylantmoore/ranger_stata/main/")
+* macOS:
+net install ranger_stata_mac, from("https://raw.githubusercontent.com/dylantmoore/ranger_stata/main") replace
+
+* Linux:
+net install ranger_stata_linux, from("https://raw.githubusercontent.com/dylantmoore/ranger_stata/main") replace
+
+* Windows:
+net install ranger_stata_win, from("https://raw.githubusercontent.com/dylantmoore/ranger_stata/main") replace
+
+* All platforms:
+net install ranger_stata, from("https://raw.githubusercontent.com/dylantmoore/ranger_stata/main") replace
 ```
 
 Or clone and use directly:

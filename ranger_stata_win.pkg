@@ -1,0 +1,14 @@
+v 3
+d ranger_stata - Random Forests for Stata
+d
+d Random forest regression and classification via the ranger C++ library.
+d Supports variable importance, OOB error estimation, and multithreaded
+d tree growing.
+d
+d Requires: Stata 14.0 or later
+d
+d Distribution-Date: 20260226
+
+f ranger.ado
+f ranger.sthlp
+f ranger_plugin.windows-x86_64.plugin

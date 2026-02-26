@@ -7,7 +7,7 @@ d tree growing.
 d
 d Requires: Stata 14.0 or later
 d
-d Distribution-Date: 20260222
+d Distribution-Date: 20260226
 
 f ranger.ado
 f ranger.sthlp
