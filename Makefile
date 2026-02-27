@@ -34,9 +34,9 @@ PLUGIN_SRC = ranger_plugin.cpp
 STPLUGIN_SRC = stplugin.c
 
 # Output filenames
-TARGET_DARWIN  = ranger_plugin.darwin-arm64.plugin
-TARGET_WINDOWS = ranger_plugin.windows-x86_64.plugin
-TARGET_LINUX   = ranger_plugin.linux-x86_64.plugin
+TARGET_DARWIN  = ranger_plugin_macosx.plugin
+TARGET_WINDOWS = ranger_plugin_windows.plugin
+TARGET_LINUX   = ranger_plugin_unix.plugin
 
 # ── Darwin (macOS arm64) ─────────────────────────────────────────────
 DARWIN_CXX    = g++

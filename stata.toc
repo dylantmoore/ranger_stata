@@ -3,5 +3,7 @@ d ranger_stata - Random Forests for Stata via ranger C++ library
 d Wright & Ziegler (2017) ranger wrapped as a Stata C++ plugin
 d
 d Distribution-Date: 20260226
-p ranger_stata All platforms (macOS ARM64 only for now)
-p ranger_stata_mac macOS only (ARM64)
+p ranger_stata All platforms (macOS, Linux, Windows)
+p ranger_stata_mac macOS only
+p ranger_stata_linux Linux only
+p ranger_stata_win Windows only
